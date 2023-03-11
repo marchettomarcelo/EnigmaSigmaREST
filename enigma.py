@@ -69,3 +69,10 @@ def de_nigma(msg,P,E):
         saida.append(arr)
     
     return para_string(np.array(saida).transpose())
+
+
+x = enigma("barros", encoder, encoder2)
+print(x)
+
+
+print(de_nigma(x, encoder, encoder2))
