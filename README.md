@@ -6,18 +6,44 @@ tags:
   - flask
 ---
 
-# Python Flask Example
+# REST API que criptografa e decifra mensagens
 
-This is a [Flask](https://flask.palletsprojects.com/en/1.1.x/) app that serves a simple JSON response.
+## Rotas disponíveis
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/zUcpux)
+#### `POST: /enigma/` 
 
-## ✨ Features
+Criptografa sua mensagem.
 
-- Python
-- Flask
+A string deve ser passada como valor de um objeto com chave "msg".
 
-## 💁‍♀️ How to use
+Exemplo:
+```
+{
+  msg: "mensagem criptogradfada"
+}
+```
 
-- Install Python requirements `pip install -r requirements.txt`
-- Start the server for development `python3 main.py`
+#### `GET: /denigma/<mensagem>/` 
+
+Decifra sua mensagem.
+
+A string deve ser passada como parâmetro.
+
+Exemplo:
+```
+/denigma/asldbcahnsecasec/
+```
+
+
+## Para rodar localmente:
+
+Digite os seguintes comandos no terminal:
+```
+python3 -m venv env
+pip install -r requirements.txt
+flask run
+```
+
+## URL do projeto no Railway:
+
+https://enigma-sigma.up.railway.app/
